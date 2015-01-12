@@ -23,7 +23,12 @@ function ($stateProvider, $urlRouterProvider) {
             return posts.get($stateParams.id);
     }]
             }
-        });
+        })
+		.state('registion', {
+			url: '/reg',
+			templateUrl: '/reg.html',
+			controller: 'RegCtrl'
+		});
         $urlRouterProvider.otherwise('home');
 }
 ])
@@ -100,4 +105,11 @@ function ($scope, posts, post) {
         posts.upvoteComment(post, comment);
     };
 }
-]);
+])
+.controller('RegCtrl', ['$scope', function ($scope) {
+	$scope.defaults = {
+		username: 'example@example.com',
+		password: 'example',
+		isRemember: true
+	};
+}]);

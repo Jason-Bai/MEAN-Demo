@@ -5,7 +5,7 @@ var Post = mongoose.model('Post');
 var Comment = mongoose.model('Comment');
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Flapper News' });
 });
 
 router.get('/posts', function (req, res, next) {
