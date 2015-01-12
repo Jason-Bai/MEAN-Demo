@@ -100,4 +100,4 @@ function ($scope, posts, post) {
         posts.upvoteComment(post, comment);
     };
 }
-])
+]);
